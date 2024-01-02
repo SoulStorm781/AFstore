@@ -42,6 +42,7 @@ nav {
 
 .limitedOffer {
   font-size: 20px;
+  color: white;
   border-bottom: 2px solid green;
   cursor: pointer;
 }
@@ -148,19 +149,19 @@ nav {
 }
 
 .sliderItem:nth-child(1) .sliderPrice {
-  color: #369e62;
+  color: white;
 }
 .sliderItem:nth-child(2) .sliderPrice {
   color: white;
 }
 .sliderItem:nth-child(3) .sliderPrice {
-  color: teal;
+  color: white;
 }
 .sliderItem:nth-child(4) .sliderPrice {
-  color: cornflowerblue;
+  color: white;
 }
 .sliderItem:nth-child(5) .sliderPrice {
-  color: cornsilk;
+  color: white;
 }
 
 /* Add these styles to your existing CSS */

@@ -90,61 +90,41 @@ let currentSlide = 0;
 
 function showSlide(index) {
   const slides = document.querySelectorAll('.sliderItem');
-  
+
   if (index >= slides.length) {
-      currentSlide = 0;
-  } 
-  else if (index < 0) {
-      currentSlide = slides.length - 1;
-  } 
-  else {
-      currentSlide = index;
+    currentSlide = 0;
+  } else if (index < 0) {
+    currentSlide = slides.length - 1;
+  } else {
+    currentSlide = index;
   }
 
   slides.forEach((slide, i) => {
-      slide.style.transform = `translateX(${100 * (i - currentSlide)}% )`;
+    slide.style.transform = `translateX(${100 * (i - currentSlide)}% )`;
 
-      choosenProduct = products[index];
+    choosenProduct = products[currentSlide];
 
-      //change texts of currentProduct
-      currentProductTitle.textContent = choosenProduct.title;
-      currentProductPrice.textContent = "$" + choosenProduct.price;
-      currentProductImg.src = choosenProduct.colors[0].img;
-    
-      //assing new colors
-      currentProductColors.forEach((color, index) => {
-        color.style.backgroundColor = choosenProduct.colors[index].code;
-      });
+    //change texts of currentProduct
+    currentProductTitle.textContent = choosenProduct.title;
+    currentProductPrice.textContent = "$" + choosenProduct.price;
+    currentProductImg.src = choosenProduct.colors[0].img;
+
+    //assing new colors
+    currentProductColors.forEach((color, index) => {
+      color.style.backgroundColor = choosenProduct.colors[index].code;
+    });
   });
-
 }
+
 function changeSlide(direction) {
-    showSlide(currentSlide + direction);
+  showSlide(currentSlide + direction);
 }
-// Show the initial slide
-showSlide(currentSlide);
 
-
-//----------------------------------------------------------------
-// menuItems.forEach((item, index) => {
-//   item.addEventListener("click", () => {
-//     //change the current slide
-//     wrapper.style.transform = `translateX(${-100 * index}vw)`;
-
-//     //change the choosen product
-//     choosenProduct = products[index];
-
-//     //change texts of currentProduct
-//     currentProductTitle.textContent = choosenProduct.title;
-//     currentProductPrice.textContent = "$" + choosenProduct.price;
-//     currentProductImg.src = choosenProduct.colors[0].img;
-
-//     //assing new colors
-//     currentProductColors.forEach((color, index) => {
-//       color.style.backgroundColor = choosenProduct.colors[index].code;
-//     });
-//   });
-// });
+menuItems.forEach((item, index) => {
+  item.addEventListener("click", () => {
+    changeSlide(index);
+  });
+});
 
 currentProductColors.forEach((color, index) => {
   color.addEventListener("click", () => {
@@ -174,6 +154,7 @@ productButton.addEventListener("click", () => {
 close.addEventListener("click", () => {
   payment.style.display = "none";
 });
+
 
 
 /////////////////////////
