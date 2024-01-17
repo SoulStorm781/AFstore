@@ -41,16 +41,16 @@
     <div class="slider">
         <div class="sliderWrapper">
             <div class="sliderItem">
-                <img src="./img/air.png" alt="" class="sliderImg">
-                <div class="sliderBg"></div>
+                <img src="./img/skechers/go-golf-black.png" alt="" class="sliderImg">
+                <div class="sliderBg" style="background-color: teal;"></div>
                 <h1 class="sliderTitle">GO GOLF</br> NEW</br> SEASON</h1>
-                <h2 class="sliderPrice">$149</h2>
+                <h2 class="sliderPrice" style="color: teal;">$149</h2>
                 <a href="#product">
                     <button class="buyButton">BUY NOW!</button>
                 </a>
             </div>
             <div class="sliderItem">
-                <img src="./img/jordan.png" alt="" class="sliderImg">
+                <img src="./img/skechers/go-run-black.png" alt="" class="sliderImg">
                 <div class="sliderBg"></div>
                 <h1 class="sliderTitle">GO RUN</br> NEW</br> SEASON</h1>
                 <h2 class="sliderPrice">$110</h2>
@@ -59,16 +59,16 @@
                 </a>
             </div>
             <div class="sliderItem">
-                <img src="./img/blazer.png" alt="" class="sliderImg">
-                <div class="sliderBg"></div>
+                <img src="./img/skechers/unos-black.png" alt="" class="sliderImg">
+                <div class="sliderBg" style="background-color: #369e62;"></div>
                 <h1 class="sliderTitle">UNOS</br> NEW</br> SEASON</h1>
-                <h2 class="sliderPrice">$199</h2>
+                <h2 class="sliderPrice" style="color: #369e62;">$199</h2>
                 <a href="#product">
                     <button class="buyButton">BUY NOW!</button>
                 </a>
             </div>
             <div class="sliderItem">
-                <img src="./img/crater.png" alt="" class="sliderImg">
+                <img src="./img/skechers/go-walk-black.png" alt="" class="sliderImg">
                 <div class="sliderBg"></div>
                 <h1 class="sliderTitle">GO WALK</br> NEW</br> SEASON</h1>
                 <h2 class="sliderPrice">$140</h2>
@@ -77,7 +77,7 @@
                 </a>
             </div>
             <div class="sliderItem">
-                <img src="./img/hippie.png" alt="" class="sliderImg">
+                <img src="./img/skechers/sports-1.png" alt="" class="sliderImg">
                 <div class="sliderBg"></div>
                 <h1 class="sliderTitle">SPORTS</br> NEW</br> SEASON</h1>
                 <h2 class="sliderPrice">$89</h2>
@@ -131,17 +131,17 @@
         <div class="payment">
             <h1 class="payTitle">Personal Information</h1>
             <label>Name and Surname</label>
-            <input type="text" placeholder="John Wick" class="payInput">
+            <input type="text" id="name" placeholder="John Wick" class="payInput">
             <label>Phone Number</label>
-            <input type="text" placeholder="+1 234 5678" class="payInput">
+            <input type="text" id="phone-number" placeholder="+1 234 5678" class="payInput">
             <label>Address</label>
-            <input type="text" placeholder="Elton St 21 22-145" class="payInput">
+            <input type="text" id="address" placeholder="Elton St 21 22-145" class="payInput">
             <h1 class="payTitle">Card Information</h1>
             <div class="cardIcons">
                 <img src="./img/visa.png" width="40" alt="" class="cardIcon">
                 <img src="./img/master.png" alt="" width="40" class="cardIcon">
             </div>
-            <input type="password" class="payInput" placeholder="Card Number">
+            <input type="password" id="card-number" class="payInput" placeholder="Card Number">
             <div class="cardInfo">
                 <input type="text" placeholder="mm" class="payInput sm">
                 <input type="text" placeholder="yyyy" class="payInput sm">
@@ -149,6 +149,21 @@
             </div>
             <button class="payButton">Checkout!</button>
             <span class="close">X</span>
+        </div>
+        <div class="bill">
+            <h1 class="billTitle">Cash Receipt</h1>
+            <p class="location"> Address: Shop#69, Blue Area, Islamabad <br> Telp. 051-123456 <br>------------------------------------------------------------------<p> 
+            <span class="item"> Item </span>
+            <span class="price"> Price </span>
+            <button class="confirmButton">Confirm Order</button>
+            <span class="close1">X</span>
+        </div>
+        <div class="done">
+            <div class="done1">            
+            <div class="order">Your Order has been placed. <br><h1 class="thank">Thank You!</h1></div>
+            
+            <span class="close2">X</span></div>
+
         </div>
     </div>
     <div class="gallery">

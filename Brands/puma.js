@@ -8,12 +8,12 @@ const products = [
     price: 149,
     colors: [
       {
-        code: "black",
-        img: "./img/air.png",
+        code: "teal",
+        img: "./img/puma/suede1.png",
       },
       {
-        code: "darkblue",
-        img: "./img/air2.png",
+        code: "#3EA4BF",
+        img: "./img/puma/suede2.png",
       },
     ],
   },
@@ -23,12 +23,12 @@ const products = [
     price: 110,
     colors: [
       {
-        code: "lightgray",
-        img: "./img/jordan.png",
+        code: "black",
+        img: "./img/puma/EVO-3.png",
       },
       {
-        code: "green",
-        img: "./img/jordan2.png",
+        code: "#E2E0D1",
+        img: "./img/puma/EVO-4.png",
       },
     ],
   },
@@ -38,12 +38,12 @@ const products = [
     price: 199,
     colors: [
       {
-        code: "lightgray",
-        img: "./img/blazer.png",
+        code: "teal",
+        img: "./img/puma/rider-1.png",
       },
       {
-        code: "green",
-        img: "./img/blazer2.png",
+        code: "#E2E0D1",
+        img: "./img/puma/rider-2.png",
       },
     ],
   },
@@ -53,12 +53,12 @@ const products = [
     price: 149,
     colors: [
       {
-        code: "black",
-        img: "./img/crater.png",
+        code: "red",
+        img: "./img/puma/fuse-1.png",
       },
       {
-        code: "lightgray",
-        img: "./img/crater2.png",
+        code: "black",
+        img: "./img/puma/fuse-2.png",
       },
     ],
   },
@@ -68,12 +68,12 @@ const products = [
     price: 89,
     colors: [
       {
-        code: "gray",
-        img: "./img/hippie.png",
+        code: "white",
+        img: "./img/puma/ca-pro.png",
       },
       {
-        code: "black",
-        img: "./img/hippie2.png",
+        code: "#294B6E",
+        img: "./img/puma/ca-pro-2.png",
       },
     ],
   },
@@ -124,14 +124,42 @@ currentProductSizes.forEach((size, index) => {
   });
 });
 
-const productButton = document.querySelector(".productButton");
-const payment = document.querySelector(".payment");
-const close = document.querySelector(".close");
+document.addEventListener("DOMContentLoaded", function () {
+  const productButton = document.querySelector(".productButton");
+  const payButton = document.querySelector(".payButton");
+  const confirmButton = document.querySelector(".confirmButton");
+  const payment = document.querySelector(".payment");
+  const bill = document.querySelector(".bill");
+  const done = document.querySelector(".done");
+  const close = document.querySelector(".close");
+  const close1 = document.querySelector(".close1");
+  const close2 = document.querySelector(".close2");
 
-productButton.addEventListener("click", () => {
-  payment.style.display = "flex";
-});
+  productButton.addEventListener("click", () => {
+    payment.style.display = "flex";
+    // bill.style.display = "none";
+  });
 
-close.addEventListener("click", () => {
-  payment.style.display = "none";
+  payButton.addEventListener("click", () => {
+    payment.style.display = "none";
+    bill.style.display = "flex";
+  });
+  confirmButton.addEventListener("click", () => {
+    payment.style.display = "none";
+    bill.style.display = "none";
+    done.style.display = "flex";
+  });
+
+  close.addEventListener("click", () => {
+    payment.style.display = "none";
+    // bill.style.display = "none";
+  });
+  close1.addEventListener("click", () => {
+    // payment.style.display = "none";
+    bill.style.display = "none";
+  });  
+  close2.addEventListener("click", () => {
+    // payment.style.display = "none";
+    done.style.display = "none";
+  });
 });

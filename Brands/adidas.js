@@ -9,11 +9,11 @@ const products = [
     colors: [
       {
         code: "black",
-        img: "./img/air.png",
+        img: "./img/adidas/runfalcon-black.png",
       },
       {
-        code: "darkblue",
-        img: "./img/air2.png",
+        code: "white",
+        img: "./img/adidas/runfalcon-white.png",
       },
     ],
   },
@@ -23,12 +23,12 @@ const products = [
     price: 110,
     colors: [
       {
-        code: "lightgray",
-        img: "./img/jordan.png",
+        code: "black",
+        img: "./img/adidas/pro-next-black.png",
       },
       {
-        code: "green",
-        img: "./img/jordan2.png",
+        code: "white",
+        img: "./img/adidas/pro-next-white.png",
       },
     ],
   },
@@ -38,12 +38,12 @@ const products = [
     price: 199,
     colors: [
       {
-        code: "lightgray",
-        img: "./img/blazer.png",
+        code: "black",
+        img: "./img//adidas/hoops-black.png",
       },
       {
-        code: "green",
-        img: "./img/blazer2.png",
+        code: "white",
+        img: "./img//adidas/hoops-white.png",
       },
     ],
   },
@@ -54,11 +54,11 @@ const products = [
     colors: [
       {
         code: "black",
-        img: "./img/crater.png",
+        img: "./img/adidas/lite-racer-black.png",
       },
       {
-        code: "lightgray",
-        img: "./img/crater2.png",
+        code: "white",
+        img: "./img/adidas/lite-racer-white.png",
       },
     ],
   },
@@ -68,12 +68,12 @@ const products = [
     price: 89,
     colors: [
       {
-        code: "gray",
-        img: "./img/hippie.png",
+        code: "black",
+        img: "./img/adidas/kaptir-black.png",
       },
       {
-        code: "black",
-        img: "./img/hippie2.png",
+        code: "white",
+        img: "./img/adidas/kaptir-white.png",
       },
     ],
   },
@@ -124,14 +124,42 @@ currentProductSizes.forEach((size, index) => {
   });
 });
 
-const productButton = document.querySelector(".productButton");
-const payment = document.querySelector(".payment");
-const close = document.querySelector(".close");
+document.addEventListener("DOMContentLoaded", function () {
+  const productButton = document.querySelector(".productButton");
+  const payButton = document.querySelector(".payButton");
+  const confirmButton = document.querySelector(".confirmButton");
+  const payment = document.querySelector(".payment");
+  const bill = document.querySelector(".bill");
+  const done = document.querySelector(".done");
+  const close = document.querySelector(".close");
+  const close1 = document.querySelector(".close1");
+  const close2 = document.querySelector(".close2");
 
-productButton.addEventListener("click", () => {
-  payment.style.display = "flex";
-});
+  productButton.addEventListener("click", () => {
+    payment.style.display = "flex";
+    // bill.style.display = "none";
+  });
 
-close.addEventListener("click", () => {
-  payment.style.display = "none";
+  payButton.addEventListener("click", () => {
+    payment.style.display = "none";
+    bill.style.display = "flex";
+  });
+  confirmButton.addEventListener("click", () => {
+    payment.style.display = "none";
+    bill.style.display = "none";
+    done.style.display = "flex";
+  });
+
+  close.addEventListener("click", () => {
+    payment.style.display = "none";
+    // bill.style.display = "none";
+  });
+  close1.addEventListener("click", () => {
+    // payment.style.display = "none";
+    bill.style.display = "none";
+  });  
+  close2.addEventListener("click", () => {
+    // payment.style.display = "none";
+    done.style.display = "none";
+  });
 });

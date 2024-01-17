@@ -124,14 +124,42 @@ currentProductSizes.forEach((size, index) => {
   });
 });
 
-const productButton = document.querySelector(".productButton");
-const payment = document.querySelector(".payment");
-const close = document.querySelector(".close");
+document.addEventListener("DOMContentLoaded", function () {
+  const productButton = document.querySelector(".productButton");
+  const payButton = document.querySelector(".payButton");
+  const confirmButton = document.querySelector(".confirmButton");
+  const payment = document.querySelector(".payment");
+  const bill = document.querySelector(".bill");
+  const done = document.querySelector(".done");
+  const close = document.querySelector(".close");
+  const close1 = document.querySelector(".close1");
+  const close2 = document.querySelector(".close2");
 
-productButton.addEventListener("click", () => {
-  payment.style.display = "flex";
-});
+  productButton.addEventListener("click", () => {
+    payment.style.display = "flex";
+    // bill.style.display = "none";
+  });
 
-close.addEventListener("click", () => {
-  payment.style.display = "none";
+  payButton.addEventListener("click", () => {
+    payment.style.display = "none";
+    bill.style.display = "flex";
+  });
+  confirmButton.addEventListener("click", () => {
+    payment.style.display = "none";
+    bill.style.display = "none";
+    done.style.display = "flex";
+  });
+
+  close.addEventListener("click", () => {
+    payment.style.display = "none";
+    // bill.style.display = "none";
+  });
+  close1.addEventListener("click", () => {
+    // payment.style.display = "none";
+    bill.style.display = "none";
+  });  
+  close2.addEventListener("click", () => {
+    // payment.style.display = "none";
+    done.style.display = "none";
+  });
 });
